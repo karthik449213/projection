@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 219 49% 20%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 35 43% 59%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 36 47% 38%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 219 49% 20%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 35 43% 59%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 36 47% 38%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom styling for the tailoring shop */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  background-color: #F9F7F4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-section {
+  background-image: linear-gradient(rgba(26, 38, 57, 0.7), rgba(26, 38, 57, 0.7)), url('https://images.unsplash.com/photo-1610652492500-ded49ceeb378?ixlib=rb-1.2.1&auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  min-height: 95vh;
+}
+
+.navbar-custom {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-scrolled {
+  background-color: #1A2639 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #C19A6B;
+  border-color: #C19A6B;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #8D6B36;
+  border-color: #8D6B36;
+}
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: rgba(193, 154, 107, 0.7);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.form-control:focus {
+  border-color: #C19A6B;
+  box-shadow: 0 0 0 0.25rem rgba(193, 154, 107, 0.25);
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.text-primary {
+  color: #1A2639 !important;
+}
+
+.text-secondary {
+  color: #C19A6B !important;
+}
+
+.text-accent {
+  color: #8D6B36 !important;
+}
+
+.bg-primary {
+  background-color: #1A2639 !important;
+}
+
+.bg-secondary {
+  background-color: #C19A6B !important;
+}
+
+.bg-light {
+  background-color: #F9F7F4 !important;
+}
+
+.bg-dark {
+  background-color: #333333 !important;
+}
+
+.is-invalid {
+  border-color: #dc3545;
+  padding-right: calc(1.5em + .75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(.375em + .1875rem) center;
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: .875em;
+  color: #dc3545;
+}
+
+.is-invalid~.invalid-feedback {
+  display: block;
+}
